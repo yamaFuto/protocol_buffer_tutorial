@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package example.oneofs;
+
+option go_package = "github.com/Clement-Jean/protoc_go_tutorial/proto";
+
+message Result {
+  oneof result {
+    string message = 1;
+    uint32 id = 2;
+  }
+
+  oneof test {
+    string test1 = 3;
+    string test2 = 4;
+  }
+
+  int32 yamamoto = 5;
+}
+
+message Result2 {
+  oneof result {
+    string message = 1;
+    uint32 id = 2;
+  }
+
+  oneof test {
+    string test1 = 3;
+    string test2 = 4;
+  }
+
+  int32 yamamoto = 5;
+  string Ascii = 6;
+}
